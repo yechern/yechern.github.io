@@ -27,6 +27,9 @@ math: true
  
 ## 4. 叉乘恒等式
  不过这还不是Rodrigues方程，因为它不容易计算，实际上，使用一些叉乘的恒等式，我们就能进一步化简。  
- 回忆一下双重叉积恒等式: $a\times(b\times c)=b (a·c) - c (a·b)$，应用到我们这里，就是$s\times(s\times a)=(s·a)s-v$，从而$s\times(s\times(s\times a))=(s·a)s\times- s\times v=-s \times v$  
- 转为矩阵的语言，就是恒等式$A_s^3=-A_s$，利用这个恒等式，我们就有 $exp(A_s\theta)=\sum _{n=0}^{\infty} \theta^n\frac{A_s^n}{n!}=E+A_s\sum _{n=1}^{\infty}(-1)^{n-1} \frac{\theta^{2n-1}}{(2n-1)!}+A_s^2\sum _{n=1}^{\infty}(-1)^{n-1} \frac{\theta^{2n}}{(2n)!}=E+sin\theta A_s + (1-cos \theta) A_s^2$，其中E为单位矩阵。  
+ 回忆一下双重叉积恒等式: $a\times(b\times c)=b (a·c) - c (a·b)$，应用到我们这里，就是 $s\times(s\times a)=(s·a)s-v$，从而 $s\times(s\times(s\times a))=(s·a)s\times- s\times v=-s \times v$  
+ 转为矩阵的语言，就是恒等式$A_s^3=-A_s$，利用这个恒等式，我们就有  
+ $\displaystyle \exp(A_s\theta)=\sum _{n=0}^{\infty} \theta^n\frac{A_s^n}{n!}$  
+  $\displaystyle=E+A_s\sum _{n=1}^{\infty}(-1)^{n-1} \frac{\theta^{2n-1}}{(2n-1)!}+A_s^2\sum _{n=1}^{\infty}(-1)^{n-1} \frac{\theta^{2n}}{(2n)!}$  
+  $\displaystyle=E+sin\theta A_s + (1-cos \theta) A_s^2$，其中E为单位矩阵。  
  这样，我们就得到了最终的结果： $R _\theta =E+sin\theta A_s + (1-cos \theta) A_s^2$
